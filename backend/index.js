@@ -12,22 +12,11 @@ const app = express();
 const port = 8000;
 
 // Set up middleware
-const allowedOrigins = [
-    'http://localhost:5173', 
-    'https://chat-client-em71io37n-mayanks-projects-a6ea03be.vercel.app/'
-];
-
 app.use(cors({
-    origin: (origin, callback) => {
-        // Allow requests with no origin (like mobile apps or curl requests)
-        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
+    origin: '*', 
     credentials: true,
 }));
+
 
 app.use(express.json());
 app.use('/assets', express.static(path.join(__dirname, './client/dist/assets')));
@@ -42,7 +31,7 @@ const db = mysql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    connectTimeout: 20000, // 20 seconds timeout
+    connectTimeout: 20000,
 });
 
 // Connect to MySQL database

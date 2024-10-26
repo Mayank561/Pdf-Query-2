@@ -23,11 +23,7 @@ export function App() {
 
     try {
       setLoading(true);
-<<<<<<< HEAD
-      const res = await axios.post("https://chat-client-mo1280q6q-mayanks-projects-a6ea03be.vercel.app/upload", formData);
-=======
       const res = await axios.post("http://localhost:8000/upload", formData);
->>>>>>> 6bba6db7414826aacd3b02cb1c54333ed71942b8
       console.log(res.data);
       alert("File uploaded successfully!");
       setFile(null); 
@@ -41,11 +37,7 @@ export function App() {
 
   const handleAskQuestion = async () => {
     try {
-<<<<<<< HEAD
-      const res = await axios.post("https://chat-client-mo1280q6q-mayanks-projects-a6ea03be.vercel.app/talk", { question });
-=======
       const res = await axios.post("http://localhost:8000/talk", { question });
->>>>>>> 6bba6db7414826aacd3b02cb1c54333ed71942b8
       setResponse(res.data.message);
       setQuestion(""); 
     } catch (err) {
