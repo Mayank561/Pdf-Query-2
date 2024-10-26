@@ -3,9 +3,9 @@
 
 PDF-query is a simple web application that allows users to upload PDF documents and query the content of those documents. The application processes the uploaded PDFs and utilizes natural language processing to provide answers to questions posed by the users.
 
-![Screenshot 2024-10-26 053043](https://github.com/user-attachments/assets/4b701f55-ef3f-412a-8861-9a8c37c58323)
-![Screenshot 2024-10-26 053343](https://github.com/user-attachments/assets/b54c2a54-4f83-47f0-9fc5-075f232c2399)
-![Screenshot 2024-10-26 053437](https://github.com/user-attachments/assets/359dd71b-8154-4746-85a8-e9c39c690a72)
+![Screenshot 2024-10-26 053043](https://github.com/user-attachments/assets/53bf89cb-5d1d-4476-b3be-d13ea83cc2a1)
+![Screenshot 2024-10-26 053343](https://github.com/user-attachments/assets/4cb858a4-0352-4a9a-bcaa-b7b043e2feb0)
+![Screenshot 2024-10-26 053437](https://github.com/user-attachments/assets/485207e9-dc89-4dda-9f2b-ca47d56ca1ec)
 
 
 ## Installation
