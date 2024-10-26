@@ -196,4 +196,7 @@
   .circle{
     margin: 0px;
   }
+  .form-container {
+    padding-bottom:15px;
+  }
 }
