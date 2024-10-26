@@ -62,7 +62,7 @@
   display: flex;
   flex-grow: 1;
   padding: 4rem;
-  padding-top: 6rem
+  padding-top: 6rem;
 }
 
 /* Input container */
@@ -93,7 +93,9 @@
   border: 1px solid #E4E8EE;
   color: #6E7583;
 }
-.btn{
+
+/* Button styles */
+.btn {
   display: flex;
   align-items: center;
   padding: 8px 16px;
@@ -102,21 +104,12 @@
   color: black;
   border: 1px solid black;
 }
-.circle{
+
+/* Circle icon inside button */
+.circle {
   margin-right: 8px;
 }
-.btn{
-  display: flex;
-  align-items: center;
-  padding: 8px 16px;
-  border-radius: 6px;
-  background: white;
-  color: black;
-  border: 1px solid black;
-}
-.circle{
-  margin-right: 8px;
-}
+
 /* Submit button */
 .submit-button {
   position: absolute;
@@ -141,16 +134,16 @@
   align-items: center; 
 }
 
-/* Responsive styles */
+/* Responsive styles for medium screens */
 @media (max-width: 600px) {
   .Header {
-    flex-direction: row; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
   .labelclass {
-    flex-direction: row; 
-    align-items: center;
+    /* flex-direction: column; */
     gap: 10px; 
   }
 
@@ -164,39 +157,51 @@
 
   .submit-button {
     padding: 0.5rem; 
-    right:6px;
-    right:6px;
+    right: 6px;
+    font-size: 20px;
   }
-  .btn{
-    padding: 2px 2px;
+
+  .response-container {
+    padding: 2rem 1rem;
+    padding-top: 4rem;
   }
-}
-@media(max-width:400px){
-  .Header {
-    width: 100%;
-        flex-direction: row;
-        padding: 8px;
-  }
-  .upload-text-1{
-    font-size: 0.6rem;
-  }
-  .circle{
-    margin: 0px;
+
+  .btn {
+    padding: 4px 8px;
   }
 }
-@media(max-width:400px){
+
+/* Responsive styles for small screens */
+@media (max-width: 400px) {
   .Header {
     width: 100%;
-        flex-direction: row;
-        padding: 8px;
+    flex-direction: column;
+    padding: 8px;
   }
-  .upload-text-1{
+
+  .upload-text-1 {
     font-size: 0.6rem;
   }
-  .circle{
-    margin: 0px;
+
+  .circle {
+    margin: 0;
   }
+
   .form-container {
-    padding-bottom:15px;
+    padding-bottom: 15px;
+  }
+
+  .response-container {
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+
+  .btn {
+    padding: 2px 4px;
+    font-size: 0.7rem;
+  }
+
+  .input-field {
+    padding: 10px;
   }
 }
