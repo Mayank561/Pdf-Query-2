@@ -6,6 +6,7 @@ import { CiFileOn, CiCirclePlus } from "react-icons/ci";
 
 export function App() {
   const [file, setFile] = useState(null);
+  const [uploadedFileName, setUploadedFileName] = useState("Upload PDF"); 
   const [question, setQuestion] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
@@ -13,6 +14,7 @@ export function App() {
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
+    setUploadedFileName("Upload PDF"); 
   };
 
   const handleUpload = async () => {
@@ -26,6 +28,7 @@ export function App() {
       const res = await axios.post("https://pdf-query-2.onrender.com/upload", formData);
       console.log(res.data);
       alert("File uploaded successfully!");
+      setUploadedFileName(file.name); 
       setFile(null); 
     } catch (err) {
       console.error(err);
@@ -65,8 +68,7 @@ export function App() {
               onChange={handleFileChange}
               className="file-input"
             />
-            <span className="upload-text-1">Upload PDF</span>
-            {file && <span className="uploaded-filename">: {file.name}</span>} 
+            <span className="upload-text-1">{uploadedFileName}</span> 
           </label>
           <button
             className="btn"
