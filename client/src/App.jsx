@@ -23,7 +23,7 @@ export function App() {
 
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:8000/upload", formData);
+      const res = await axios.post("https://pdf-query-2.onrender.com/upload", formData);
       console.log(res.data);
       alert("File uploaded successfully!");
       setFile(null); 
@@ -37,7 +37,7 @@ export function App() {
 
   const handleAskQuestion = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/talk", { question });
+      const res = await axios.post("https://pdf-query-2.onrender.com/talk", { question });
       setResponse(res.data.message);
       setQuestion(""); 
     } catch (err) {
